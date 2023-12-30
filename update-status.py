@@ -1,7 +1,6 @@
 import os
 import sys
 
-# Install requests module if not already installed
 try:
     import requests
 except ImportError:
@@ -18,10 +17,11 @@ username = os.environ.get('$GITHUB_USERNAME')
 
 def main():
     try:
-        user_response = requests.get(f'https://github.com/{username}/{username}', headers={'Authorization': f'Bearer {token}'})
+        user_response = requests.get(f'https://api.github.com/users/{username}', headers={'Authorization': f'Bearer {token}'})
+        print(f"API Response: {user_response.text}")  # Print the entire response for debugging
         user_data = user_response.json()
 
-        total_repos = user_data['$public_repos']
+        total_repos = user_data.get('public_repos', 'N/A')
 
         # Add more API calls and processing for other information
 
