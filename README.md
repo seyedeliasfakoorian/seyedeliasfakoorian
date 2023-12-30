@@ -3,6 +3,11 @@ I am Elias. I like technology; web-related development, to be more specific, I a
 
 I used C, python, node, typescript, PHP, React, Matlab, and many more technologies to build fully-featured full-stack applications. As a full-stack dev, I also gained experience designing accessible and visually pleasing UI/UX experiences.
 
+<p align="center">
+  <a href="https://github.com/seyedeliasfakoorian">
+    <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=wei&custom_title=GitHub%20Stats&show_icons=true&theme=github_dark&count_private=true&include_all_commits=true&hide_border=true" />
+  </a>
+</p>
 
 -----
 <p align="center">
