@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: 3.8
-      - run: update-status.py
+      - run: python update-status.py
 
       - name: Update GitHub Status
         run: update-status.py
