@@ -1,35 +1,69 @@
 import os
-import sys
-
-try:
-    import requests
-except ImportError:
-    print("Installing requests module...")
-    try:
-        os.system(f"{sys.executable} -m pip install requests")
-        import requests  # Retry import after installation
-    except Exception as e:
-        print(f"Failed to install and import requests module: {e}")
-        sys.exit(1)
+import requests
 
 token = os.environ.get('$GITHUB_TOKEN')
-username = os.environ.get('$GITHUB_USERNAME')
+username = '$GITHUB_USERNAME'
+
+def calculate_grade(total_repos):
+    # Customize the grading criteria as needed
+    if total_repos >= 100:
+        return 'A'
+    elif total_repos >= 50:
+        return 'B'
+    elif total_repos >= 20:
+        return 'C'
+    else:
+        return 'D'
+
+def create_github_status(total_repos, grade):
+    try:
+        # HTML for the status description with the grade
+        description_html = f'Grade: {grade}, Total Repositories: {total_repos}'
+
+        # API endpoint to create a GitHub status
+        status_url = f'https://api.github.com/user/status'
+
+        # Set up the request headers
+        headers = {
+            'Authorization': f'Bearer {token}',
+            'Accept': 'application/vnd.github.v3+json'
+        }
+
+        # Set up the request payload
+        payload = {
+            'state': 'success',  # Adjust the state as needed (success, error, failure, etc.)
+            'target_url': 'https://example.com',  # Adjust the target URL as needed
+            'description': description_html,
+            'context': 'custom/github-status'
+        }
+
+        # Make the API request
+        response = requests.post(status_url, json=payload, headers=headers)
+
+        # Check the response status
+        response.raise_for_status()
+        print('GitHub status updated successfully.')
+    except Exception as e:
+        print(f'Error updating GitHub status: {e}')
+        exit(1)
 
 def main():
     try:
         user_response = requests.get(f'https://api.github.com/users/{username}', headers={'Authorization': f'Bearer {token}'})
-        print(f"API Response: {user_response.text}")  # Print the entire response for debugging
         user_data = user_response.json()
 
-        total_repos = user_data.get('public_repos', 'N/A')
+        total_repos = user_data['public_repos']  # Adjust as needed
 
-        # Add more API calls and processing for other information
+        # Calculate the grade based on the total repositories
+        grade = calculate_grade(total_repos)
 
-        print(f'Total Repositories: {total_repos}')
-        # Update GitHub status using appropriate API calls
+        print(f'Grade: {grade}, Total Repositories: {total_repos}')
+
+        # Update GitHub status with the grade
+        create_github_status(total_repos, grade)
     except Exception as e:
         print(f'Error updating GitHub status: {e}')
-        sys.exit(1)
+        exit(1)
 
 if __name__ == "__main__":
     main()
