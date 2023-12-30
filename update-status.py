@@ -2,14 +2,14 @@ import os
 import requests
 
 token = os.environ.get('$GITHUB_TOKEN')
-username = '$GITHUB_USERNAME'
+username = os.environ.get('$GITHUB_USERNAME')
 
 def main():
     try:
-        user_response = requests.get(f'https://github.com/${username}/${username}', headers={'Authorization': f'Bearer {token}'})
+        user_response = requests.get(f'https://api.github.com/{username}/{username}', headers={'Authorization': f'Bearer {token}'})
         user_data = user_response.json()
 
-        total_repos = user_data['public_repos']  # Adjust as needed
+        total_repos = user_data['public_repos']
 
         # Add more API calls and processing for other information
 
