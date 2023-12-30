@@ -20,6 +20,6 @@ jobs:
       - run: python update-status.py
 
       - name: Update GitHub Status
-        run: update-status.py
+        run: python update-status.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
