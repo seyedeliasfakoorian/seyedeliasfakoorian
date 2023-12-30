@@ -1,0 +1,24 @@
+name: Update GitHub Status
+
+on:
+  branches:
+    main
+
+jobs:
+  update-status:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.8
+      - run: update-status.py
+
+      - name: Update GitHub Status
+        run: update-status.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
