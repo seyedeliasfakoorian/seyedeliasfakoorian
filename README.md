@@ -1,7 +1,7 @@
 # Hi there 👋
 I am Elias. I like technology; web-related development, to be more specific, I am working with games, hoping to obtain a bachelor's degree. I enjoy spending time learning modern frameworks and building cool projects.
 
-I used C, python, node, typescript, PHP, React, Matlab, and many more technologies to build fully-featured full-stack applications. As a full-stack dev, I also gained experience designing accessible and visually pleasing UI/UX experiences.
+I used C, typescript, shell, PHP, React, Matlab, javascript, and CSS to build fully-featured full-stack applications. As a full-stack dev, I also gained experience designing accessible and visually pleasing UI/UX experiences.
 
 <p align="center">
   <a href="https://github.com/seyedeliasfakoorian">
