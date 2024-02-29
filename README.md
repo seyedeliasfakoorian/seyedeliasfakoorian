@@ -1,5 +1,5 @@
 # Hi there 👋
-I am Elias. I like technology; web-related development, to be more specific, I am working with games, hoping to obtain a bachelor's degree. I enjoy spending time learning modern frameworks and building cool projects.
+I am Elias. I like technology; web-related development, hoping to obtain a bachelor's degree. I enjoy spending time learning modern frameworks and building cool projects.
 
 <p align="center">
   <a href="https://github.com/seyedeliasfakoorian">
