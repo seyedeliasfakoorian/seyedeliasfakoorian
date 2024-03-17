@@ -29,7 +29,7 @@ I am Elias. I like technology; web-related development, hoping to obtain a bache
       <a href=""><img alt="Objective-C"src="https://img.shields.io/badge/objectiveC-00599C.svg?logo=apple&logoColor=white"></a>
       <a href="https://github.com/search?q=user%3Aseyedeliasfakoorian+language%3Amarkdown"><img alt="Markdown" src="https://img.shields.io/badge/Markdown-000000.svg?logo=markdown&logoColor=white"></a>
       <a href="https://github.com/search?q=user%3Aseyedeliasfakoorian+language%3Ajavascript"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-43853D.svg?logo=node.js&logoColor=white"></a>
-      <a href="https://github.com/search?q=user%3Aseyedeliasfakoorian+language%3AR"><img alt="R" src="https://img.shields.io/badge/R-276DC3.svg?logo=R&logoColor=white"></a>
+      <a href="https://github.com/search?q=user%3Aseyedeliasfakoorian+language%3ARust"><img alt="Rust" src="https://img.shields.io/badge/Rust-dea584.svg?logo=Rust&logoColor=white"></a>
       <a href="https://github.com/search?q=user%3Aseyedeliasfakoorian+language%3Aphp"><img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4.svg?logo=php&logoColor=white"></a>
       <a href="https://github.com/search?q=user%3Aseyedeliasfakoorian+language%3AtypeScript"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC.svg?logo=typescript&logoColor=white"></a>
       <a href="https://github.com/search?q=user%Aseyedeliasfakoorian+language%3Ashell"><img alt="Shell" src="https://img.shields.io/badge/Shell-13fc03.svg?logo=shell&logoColor=white"></a>
